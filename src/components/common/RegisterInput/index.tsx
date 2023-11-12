@@ -41,8 +41,7 @@ const StyleInput = styled.input<{ widthProps?: number; heightProps?: number }>`
   border: 1px solid ${palette.GRAY200};
   border-radius: 10px;
   width: ${({ widthProps }) => (widthProps ? `${widthProps}px` : '100%')};
-  font-size: ${typo.Body_14()};
-  /* box-shadow: 3px 3px 1px ${palette.GRAY200}; */
+  font-size: ${typo.Body_14(400, -0.5)};
   padding-left: 18px;
   padding-right: 18px;
   color: ${palette.GRAY400};

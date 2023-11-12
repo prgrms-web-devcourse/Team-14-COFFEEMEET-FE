@@ -96,7 +96,7 @@ const ButtonsContainerOuterWrapper = styled.div`
 `
 
 const ButtonsContainer = styled.div<{ isDarkMode: boolean }>`
-  width: 348px;
+  width: 100%;
   min-height: 235px;
   max-height: 400px;
   overflow-y: auto;
