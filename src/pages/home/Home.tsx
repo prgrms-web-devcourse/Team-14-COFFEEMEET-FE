@@ -12,7 +12,7 @@ import useThemeStore from '@/store/ThemeStore'
 import { palette } from '@/styles/palette'
 
 const Home = () => {
-  const nickname = '우땅'
+  const nickname = '홍길동'
   const isDarkMode = useThemeStore((state) => state.isDarkMode)
   const toggleDarkMode = useThemeStore((state) => state.toggleDarkMode)
   const [isMatching, setIsMatching] = useState(false)

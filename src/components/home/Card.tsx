@@ -97,21 +97,7 @@ const Card = ({ isMatching, isDarkMode, onClick }: CardProps) => {
             variants={watingCounter}
           >
             <StyleWatingTopWrapper>
-              <StyleWatingTopTextWrapper>
-                <Text font={'Body_32'} fontWeight={400} letterSpacing={2}>
-                  {'3'}
-                </Text>
-                <Text
-                  font={'Body_24'}
-                  fontWeight={400}
-                  letterSpacing={2}
-                  style={{
-                    color: palette.GRAY500,
-                  }}
-                >
-                  {'/5'}
-                </Text>
-              </StyleWatingTopTextWrapper>
+              <StyleWatingTopTextWrapper></StyleWatingTopTextWrapper>
             </StyleWatingTopWrapper>
             <Spacing size={34} />
             <StyleWatingMidWrapper>
