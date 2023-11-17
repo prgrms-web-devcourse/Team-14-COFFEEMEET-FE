@@ -1,5 +1,7 @@
+import { useMutation } from '@tanstack/react-query'
 import { useState } from 'react'
 
+import MatchingApi from '@/apis/matching/MatchingApi'
 import AppHeader from '@/components/common/AppHeader'
 import { ParticularTopicButton } from '@/components/common/Buttons/IconButton'
 import GradationBackground from '@/components/common/GradationBackground'
@@ -12,6 +14,13 @@ import useThemeStore from '@/store/ThemeStore'
 import { palette } from '@/styles/palette'
 
 const Home = () => {
+  const WANTED_TOKEN: string | null = localStorage.getItem('wantedToken')
+  const mutation = useMutation(MatchingApi.POST_MATCHING_START)
+
+  const onMatchingStart = (wantedToken: string | null) => {
+    mutation.mutate(wantedToken)
+  }
+
   const nickname = '홍길동'
   const isDarkMode = useThemeStore((state) => state.isDarkMode)
   const toggleDarkMode = useThemeStore((state) => state.toggleDarkMode)
@@ -44,6 +53,7 @@ const Home = () => {
           isMatching={isMatching}
           onClick={() => {
             setIsMatching((prev) => !prev)
+            onMatchingStart(WANTED_TOKEN)
           }}
           isDarkMode={isDarkMode}
         />
